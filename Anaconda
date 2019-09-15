@@ -1,7 +1,12 @@
 改变Python版本
 sudo conda install python=3.6
 
+安装某个库
 conda install pybel
 
+寻找某个库所有的channel并安装指定的版本
 anaconda search -t conda pybel
 conda install --channel https://conda.anaconda.org/bioconda pybel
+
+更新某个库
+pip install networkx --upgrade
