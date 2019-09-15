@@ -1,5 +1,13 @@
-改变Python版本
+更新conda
+conda update -n base -c defaults conda
+
+改变Python版本(不建议使用)
 sudo conda install python=3.6
+
+新增一个py3.6的环境
+conda create --name py36 python=3.6
+conda activate py36
+conda deactivate
 
 安装某个库
 conda install pybel
