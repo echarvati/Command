@@ -5,7 +5,9 @@ conda update -n base -c defaults conda
 sudo conda install python=3.6
 
 新增一个py3.6的环境
+conda info --envs
 conda create --name py36 python=3.6
+conda remove --name py36 --all
 conda activate py36
 conda deactivate
 
