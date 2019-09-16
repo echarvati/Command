@@ -1,5 +1,4 @@
 set nocompatible		" disregard vi compatibility
-execute pathogen#infect()
 
 " ----------------------------------------------------------------------
 " file:		~/.vimrc
