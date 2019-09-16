@@ -10,11 +10,11 @@ conda activate py36
 conda deactivate
 
 安装某个库
-conda install pybel
+conda install openbabel
 
 寻找某个库所有的channel并安装指定的版本
-anaconda search -t conda pybel
-conda install --channel https://conda.anaconda.org/bioconda pybel
+anaconda search -t conda openbabel
+conda install --channel https://conda.anaconda.org/openbabel openbabel
 
 更新某个库
 pip install networkx --upgrade
