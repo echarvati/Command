@@ -1,0 +1,25 @@
+import os, sys, shutil
+sys.path.append('/share/md1400/xiangyan/Github/AIMS_Tools')
+
+from mstools.simulation.gmx import NptPPM, Npt
+from mstools.jobmanager import Slurm
+
+slurm=Slurm(*('cpu', 16, 0, 16), env_cmd='module purge; module load gromacs/2018.6')
+ppm = NptPPM(dff_root='/home/xiangyan/src/DFF/Developing',
+        dff_db='TEAMFF',
+        dff_table='MGI',
+        gmx_bin='gmx_serial',
+        gmx_mdrun='gmx_gpu mdrun',
+        packmol_bin='/share/apps/tools/packmol',
+        jobmanager=slurm,
+        )
+
+npt = Npt(dff_root='/home/xiangyan/src/DFF/Developing',
+        dff_db='TEAMFF',
+        dff_table='MGI',
+        gmx_bin='gmx_serial',
+        gmx_mdrun='gmx_gpu mdrun',
+        packmol_bin='/share/apps/tools/packmol',
+        jobmanager=slurm,
+        )
+        
