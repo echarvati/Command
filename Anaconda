@@ -20,3 +20,6 @@ conda install --channel https://conda.anaconda.org/openbabel openbabel
 
 更新某个库
 pip install networkx --upgrade
+
+
+add AAAAAAAAAAAAAAAAAA
