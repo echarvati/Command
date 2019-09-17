@@ -17,6 +17,7 @@ conda install openbabel
 寻找某个库所有的channel并安装指定的版本
 anaconda search -t conda openbabel
 conda install --channel https://conda.anaconda.org/openbabel openbabel
+conda install --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main scikit-learn
 
 更新某个库
 pip install networkx --upgrade
