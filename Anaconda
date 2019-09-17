@@ -22,4 +22,4 @@ conda install --channel https://conda.anaconda.org/openbabel openbabel
 pip install networkx --upgrade
 
 
-update in master v1
+update in master v2
