@@ -7,6 +7,16 @@ git branch -a -r
 切换到master分支
 git checkout master
 
-本地的文件修改后一定要commit之后再pull(fetch + merge)
-将本地库更新为远程库
+对于某个branch的更新：
+git commit -o filename -m 'messages about the changes in this commit'
+git commit -a -m 'messages about the changes in this commit'
+git push
+注意每次
+
+当本地库与远程库版本不一致时，(我在Pycharm上commit+push)
+先恢复所有的本地修改,也就是让本地文件跟本地库保持一致（否则会有conflict无法pull）
+git checkout filename（所有不一致的文件（夹）一一输入）
+本地库更新为跟远程库一致的最新版本
 git pull
+
+
