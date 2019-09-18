@@ -1,0 +1,11 @@
+查看目前所在分支，本地文件与本地库之间的区别
+git status
+
+查看分支信息
+git branch -a -r
+
+切换到master分支
+git checkout master
+
+将本地分支更新为远程分支
+git pull
