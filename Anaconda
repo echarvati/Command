@@ -23,4 +23,5 @@ conda install --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main 
 pip install networkx --upgrade
 
 
-update in master v2
+
+some update in webside
