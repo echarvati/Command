@@ -7,5 +7,6 @@ git branch -a -r
 切换到master分支
 git checkout master
 
-将本地分支更新为远程分支
+本地的文件修改后一定要commit之后再pull(fetch + merge)
+将本地库更新为远程库
 git pull
