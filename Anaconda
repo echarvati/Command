@@ -22,6 +22,3 @@ conda install --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main 
 更新某个库
 pip install networkx --upgrade
 
-
-
-This is in master branch， 
