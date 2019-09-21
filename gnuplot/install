@@ -1,0 +1,5 @@
+install:
+安装需要的库
+yum install cairo-devel
+yum install pango-devel
+yum install gd-devel 

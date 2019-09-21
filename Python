@@ -1,0 +1,26 @@
+得到list中某个元素出现的次数：
+from collections import Counter
+Counter(list)[True]
+import pandas as pd
+pd.value_counts(list)[True]
+
+排序：
+
+自定义类排序：
+class ExtendJob():
+    def __init__(self, job, continue_n):
+        self.jobs = job
+        self.continue_n = continue_n
+
+    def __le__(self, other):
+        return self.continue_n < other.continue_n
+
+    def __eq__(self, other):
+        return self.continue_n == other.continue_n
+
+    def __gt__(self, other):
+        return self.continue_n > other.continue_n
+
+a = [...]
+a.sort(reverse=True)
+b = sorted(a)

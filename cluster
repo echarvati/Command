@@ -1,0 +1,32 @@
+Slurm:
+sinfo
+sacct
+
+开机
+GPU
+psh gtx nvidia-smi
+psh gtx systemctl restart slurmd
+systemctl restart slurmctld
+
+scontrol update nodename=cn-1-[1-7] state=idle
+scontrol update nodename=cn-2-[1-6] state=idle
+scontrol update nodename=cn-3-[1-4] state=idle
+scontrol update nodename=cn-4-[1-12] state=idle
+
+关机
+psh all umount -a
+psh all halt
+umount -a; halt
+
+删除reservation
+scontrol delete Reservation=ml
+
+创建reservation
+create res StartTime=2019-10-16T19:00:00 Duration=5:00:00 Nodes=cn-4-1 NodeCnt=1 CoreCnt=12 BurstBuffer=null Watts=n/a
+scontrol: create res StartTime=2009-04-01T08:00:00 Duration=5:00:00 Users=dbremer NodeCnt=10 Reservation created: dbremer_1 
+
+-> % scontrol show reservation
+ReservationName=ml StartTime=2019-07-31T15:05:34 EndTime=2020-09-20T07:05:34 Duration=416-16:00:00
+   Nodes=cn-3-1 NodeCnt=1 CoreCnt=16 Features=(null) PartitionName=(null) Flags=SPEC_NODES
+   TRES=cpu=16
+   Users=(null) Accounts=sungroup Licenses=(null) State=ACTIVE BurstBuffer=(null) Watts=n/a

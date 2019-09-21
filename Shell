@@ -1,0 +1,65 @@
+1.Shell定义变量时等号之间不能有空格
+a=1   
+
+2.数组定义
+a=(1 2 3 4 5)
+
+3.数组,取值，长度
+${a[0]}
+${#a[@]}
+
+
+
+for((i=0;i<20;++i));
+do
+        for((j=0;j<8;++j));
+        do
+                n=$[i*8+j+1]
+                cd /share/workspace/xiangyan/project/project_bc/1d_model/triple_well/nobc;
+                rm repeat$n     ;mkdir repeat$n  ;cd repeat$n  ;
+                cp ../in .;cp ../bias.dat .;replace "seed=1" "seed=$n  " -- in;simulation_fast in &
+        done
+wait
+done
+
+4.判断是否是文件夹, and语句
+for file in *
+do
+        if [ -d "$file" ]
+        then
+                cd $file
+                for fold in *
+                do
+                        if [ -d "$fold" -a "$fold" != "build" ]
+                        then
+                                # echo $fold
+                                cd $fold
+                                mkdir repeat-1
+                                mv * repeat-1
+                                cd ..
+                        fi
+                done
+                cd ..
+        fi
+done
+
+for file in *
+do
+        if [ -d "$file" ]
+        then
+                if [ "$file" != "build" ]
+                then
+                        cd $file
+                        mkdir repeat1
+                        mv * repeat1
+                        cd ..
+                fi
+        fi
+done
+
+5. 清楚文件末尾^M
+sed -i 's#\r##g'
+
+6. 换行符
+echo -e "Pres-XY\nPres-XZ"
+echo "Pres-XY\nPres-XZ"
