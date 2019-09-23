@@ -1,0 +1,4 @@
+得到list中某个元素出现的次数：
+from collections import Counter
+Counter(sel_mol.training_index)[True]
+
