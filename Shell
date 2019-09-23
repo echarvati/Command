@@ -1,0 +1,14 @@
+
+
+
+for((i=0;i<20;++i));
+do
+        for((j=0;j<8;++j));
+        do
+                n=$[i*8+j+1]
+                cd /share/workspace/xiangyan/project/project_bc/1d_model/triple_well/nobc;
+                rm repeat$n     ;mkdir repeat$n  ;cd repeat$n  ;
+                cp ../in .;cp ../bias.dat .;replace "seed=1" "seed=$n  " -- in;simulation_fast in &
+        done
+wait
+done
