@@ -2,3 +2,23 @@
 from collections import Counter
 Counter(sel_mol.training_index)[True]
 
+排序：
+
+自定义类排序：
+class ExtendJob():
+    def __init__(self, job, continue_n):
+        self.jobs = job
+        self.continue_n = continue_n
+
+    def __le__(self, other):
+        return self.continue_n < other.continue_n
+
+    def __eq__(self, other):
+        return self.continue_n == other.continue_n
+
+    def __gt__(self, other):
+        return self.continue_n > other.continue_n
+
+a = [...]
+a.sort(reverse=True)
+b = sorted(a)
