@@ -7,3 +7,7 @@ alter table ion rename to iontmp
 create table ion as select id, charge, name, searched, popular, selected, smiles, iupac, validated, category, times, n_paper, force_field_support, category_xy from iontmp
 
 create table molecule as select id, code, name, cation_id, anion_id, formula, popular, selected, fit, cation_category, anion_category from moltemp
+
+
+降序排列
+jobs_extend = Job.query.order_by(Job.continue_n.desc(), Job.name)
