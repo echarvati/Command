@@ -18,6 +18,9 @@ psh all umount -a
 psh all halt
 umount -a; halt
 
+删除reservation
+scontrol delete Reservation=ml
+
 
 create res StartTime=2019-10-16T19:00:00 Duration=5:00:00 Nodes=cn-4-1 NodeCnt=1 CoreCnt=12 BurstBuffer=null Watts=n/a
 
