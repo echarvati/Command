@@ -20,3 +20,10 @@ umount -a; halt
 
 
 create res StartTime=2019-10-16T19:00:00 Duration=5:00:00 Nodes=cn-4-1 NodeCnt=1 CoreCnt=12 BurstBuffer=null Watts=n/a
+
+
+-> % scontrol show reservation
+ReservationName=ml StartTime=2019-07-31T15:05:34 EndTime=2020-09-20T07:05:34 Duration=416-16:00:00
+   Nodes=cn-3-1 NodeCnt=1 CoreCnt=16 Features=(null) PartitionName=(null) Flags=SPEC_NODES
+   TRES=cpu=16
+   Users=(null) Accounts=sungroup Licenses=(null) State=ACTIVE BurstBuffer=(null) Watts=n/a
