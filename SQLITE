@@ -9,5 +9,10 @@ create table ion as select id, charge, name, searched, popular, selected, smiles
 create table molecule as select id, code, name, cation_id, anion_id, formula, popular, selected, fit, cation_category, anion_category from moltemp
 
 
+alter table job rename to jobtmp
+
+create table job as select id, task_id, t, p, time, name, cycle, status, converged, result, pbs_jobs_id, repeat_id from jobtmp
+
+
 降序排列
 jobs_extend = Job.query.order_by(Job.continue_n.desc(), Job.name)
