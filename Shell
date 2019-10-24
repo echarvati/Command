@@ -21,3 +21,24 @@ do
         done
 wait
 done
+
+4.判断是否是文件夹, and语句
+for file in *
+do
+        if [ -d "$file" ]
+        then
+                cd $file
+                for fold in *
+                do
+                        if [ -d "$fold" -a "$fold" != "build" ]
+                        then
+                                # echo $fold
+                                cd $fold
+                                mkdir repeat1
+                                mv * repeat1
+                                cd ..
+                        fi
+                done
+                cd ..
+        fi
+done
