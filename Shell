@@ -34,8 +34,8 @@ do
                         then
                                 # echo $fold
                                 cd $fold
-                                mkdir repeat1
-                                mv * repeat1
+                                mkdir repeat-1
+                                mv * repeat-1
                                 cd ..
                         fi
                 done
