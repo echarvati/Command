@@ -56,3 +56,6 @@ do
                 fi
         fi
 done
+
+5. 清楚文件末尾^M
+sed -i 's#\r##g'
