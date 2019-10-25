@@ -42,3 +42,17 @@ do
                 cd ..
         fi
 done
+
+for file in *
+do
+        if [ -d "$file" ]
+        then
+                if [ "$file" != "build" ]
+                then
+                        cd $file
+                        mkdir repeat1
+                        mv * repeat1
+                        cd ..
+                fi
+        fi
+done
