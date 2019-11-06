@@ -21,6 +21,10 @@ set style line 4 lt 1 lw 3 lc rgb "#00eeee" # dark-cyan
 
 # set the position of legend
 set key top left horizontal sample 1.
+set key bottom right vertical sample 1.
+
+#
+set xtics 100
 
 # using logscale
 set logscale y
