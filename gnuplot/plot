@@ -9,8 +9,8 @@ dx = x_max - x_min
 y_min = 0
 y_max = 100
 dy = y_max -y_min
-set xr [x_min, x_max]
-set yr [y_min, y_max]
+set xr [x_min:x_max]
+set yr [y_min:y_max]
 set xtics 100
 
 # used in panel (a) (b)...
