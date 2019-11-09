@@ -1,0 +1,6 @@
+sacctmgr show qos format=name,priority
+sacctmgr add qos zebra
+sacctmgr modify qos zebra set priority=10
+
+https://slurm.schedmd.com/qos.html
+http://bicmr.pku.edu.cn/~wenzw/pages/slurm.html
