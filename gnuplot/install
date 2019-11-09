@@ -1,0 +1,3 @@
+install:
+安装需要的库
+yum install gd-devel 
