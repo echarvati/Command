@@ -12,6 +12,7 @@ create table molecule as select id, code, name, cation_id, anion_id, formula, po
 alter table job rename to jobtmp
 
 create table job as select id, task_id, t, p, time, name, cycle, status, converged, result, pbs_jobs_id, repeat_id from jobtmp
+create table task as select id, compute_id, n_components, smiles_list, n_mol_list, procedure, t_list, p_list, n_mol_ratio, name, stage, status, commands, remark, post_result from tasktmp
 
 
 降序排列
