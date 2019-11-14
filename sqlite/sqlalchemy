@@ -1,0 +1,2 @@
+from sqlalchemy import or_, and_
+Job.query.filter(or_(Job.p==1, Job.p==50, Job.p==100))
