@@ -1,5 +1,9 @@
-from sqlalchemy import or_, and_
+and, or, in的用法
+from sqlalchemy import or_, and_, in_
 Job.query.filter(or_(Job.p==1, Job.p==50, Job.p==100))
+Job.query.filter(Job.p.in_([1, 100, 1000])))
 
 降序排列
 jobs_extend = Job.query.order_by(Job.continue_n.desc(), Job.name)
+
+
