@@ -19,4 +19,5 @@ git checkout filename（所有不一致的文件（夹）一一输入）
 本地库更新为跟远程库一致的最新版本
 git pull
 
-
+合并历史commit记录
+git rebase -i HEAD~100
