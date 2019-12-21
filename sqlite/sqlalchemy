@@ -6,4 +6,6 @@ Job.query.filter(Job.p.in_([1, 100, 1000])))
 降序排列
 jobs_extend = Job.query.order_by(Job.continue_n.desc(), Job.name)
 
-
+随机排序
+from sqlalchemy import func
+jobs_extend = Job.query.order_by(order_by(func.random()))
