@@ -1,1 +1,10 @@
-12313
+1.Basis sets and pseudopotential
+Files is save in cp2k-5.1/data
+
+2.Orbital transformation (03, 08 JCP)
+DIIS (1982 JCC)
+Advantages: It's fast, because no expensive diagonalisation is performed. If preconditioned correctly, method guaranteed to find minimum. 
+Disadvantages: Sensitive to preconditioning. A good preconditioner can be expensive. No smearing, or advanced SCF mixing possible: 
+POOR convergence for metalic systems. 
+
+3.
