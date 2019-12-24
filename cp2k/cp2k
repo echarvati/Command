@@ -7,4 +7,13 @@ Advantages: It's fast, because no expensive diagonalisation is performed. If pre
 Disadvantages: Sensitive to preconditioning. A good preconditioner can be expensive. No smearing, or advanced SCF mixing possible: 
 POOR convergence for metalic systems. 
 
-3.
+FORCE_EVAL-DFT-SCF-OT
+
+3.density matrix extrapolation
+PS and ASPC are recommended. Order for the PS or ASPC extrapolation (typically 2-4). 
+Higher order might bring more accuracy, but comes, for large systems, also at some cost. 
+In some cases, a high order extrapolation is not stable, and the order needs to be reduced.
+
+FORCE_EVAL-DFT-QS-EXTRAPOLATION
+FORCE_EVAL-DFT-QS-EXTRAPOLATION_ORDER
+
