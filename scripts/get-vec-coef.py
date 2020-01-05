@@ -11,6 +11,8 @@ for line in open(opt.input, 'r').readlines():
         time_list.append(line.split()[-1])
     elif not line.startswith('#'):
         info = line.split()
+        if len(info) < 4:
+            continue
         coef_id = int(info[-1])
         if len(coef_list) < coef_id + 1:
             coef_list.append([])
